@@ -277,8 +277,43 @@ echo $soma; // 160
 
 ---
 
-## <a name="parte13"></a>
+## <a name="parte13">Comentários</a>
 
+- 01-PHP-Basico\13-cometarios.php
+
+```js
+<?php
+//Está sendo armazenado a soma de 5 com 3 na variável $variavel
+//texto
+//texto
+
+$variavel = 5 + 3; //explicação
+
+/* School of Net */
+
+/*
+ School of Net 
+ asdfasdf
+ asdfasdf
+ asdfasdf
+ asdfasdf
+ asdfasdfsadf
+ */
+
+ // comentario de uma linha
+
+ /* comentario multilinha */
+
+ /****************************************************
+ * 
+ * Texto
+ * 
+ * 
+ * 
+ ****************************************************/
+
+ /******* TEXTO *****************/
+```
 
 [Voltar ao Índice](#indice)
 
