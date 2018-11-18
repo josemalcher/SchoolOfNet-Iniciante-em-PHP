@@ -361,6 +361,61 @@ $array1[3];
 
 ## <a name="parte15">Arrays com chaves e valores</a>
 
+- 01-PHP-Basico\15-arrays-chave-valor.php
+
+```
+<?php
+//array chaves - 0 1 2 3 4 5
+//array - chaves e valores
+
+$array = array(
+    'luiz' => 40,
+    200,
+    100,
+    3000 => 150,
+    "School of Net",
+    true
+);
+
+echo $array['luiz'];
+echo "\n";
+
+echo $array[1];
+echo "\n";
+
+echo $array[3000];
+echo "\n";
+
+//echo $array[2];
+//echo "\n";
+echo $array[3001];
+echo "\n";
+
+
+var_dump($array);
+
+```
+
+```
+40
+100
+150
+School of Net
+array(6) {
+  ["luiz"]=>
+  int(40)
+  [0]=>
+  int(200)
+  [1]=>
+  int(100)
+  [3000]=>
+  int(150)
+  [3001]=>
+  string(13) "School of Net"
+  [3002]=>
+  bool(true)
+}
+```
 
 [Voltar ao Índice](#indice)
 
