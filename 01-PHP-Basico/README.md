@@ -29,50 +29,72 @@ https://www.schoolofnet.com/curso/php/linguagem-php/iniciando-com-php/
 
 ---
 
-## <a name="parte1"></a>
+## <a name="parte1">Introdução</a>
 
+O PHP (um acrônimo recursivo para PHP: Hypertext Preprocessor) é uma linguagem de script open source de uso geral, muito utilizada, e especialmente adequada para o desenvolvimento web e que pode ser embutida dentro do HTML.
 
-[Voltar ao Índice](#indice)
-
----
-
-## <a name="parte2"></a>
 
 
 [Voltar ao Índice](#indice)
 
 ---
 
-## <a name="parte3"></a>
+## <a name="parte2">Dicas para iniciantes com PHP</a>
+
+- http://www.php.net/
+- http://www.zend.com/
+
+[Voltar ao Índice](#indice)
+
+---
+
+## <a name="parte3">Instalando PHP no Windows</a>
+
+```
+php -v
+PHP 7.2.1 (cli) (built: Jan  4 2018 04:29:12) ( ZTS MSVC15 (Visual C++ 2017) x86 )
+Copyright (c) 1997-2017 The PHP Group
+Zend Engine v3.2.0, Copyright (c) 1998-2017 Zend Technologies
+```
+
+[Voltar ao Índice](#indice)
+
+---
+
+## <a name="parte4">Instalando PHP no Linux</a>
 
 
 [Voltar ao Índice](#indice)
 
 ---
 
-## <a name="parte4"></a>
+## <a name="parte5">Instalando PHP no MAC</a>
 
 
 [Voltar ao Índice](#indice)
 
 ---
 
-## <a name="parte5"></a>
+## <a name="parte6">Qual IDE devo usar</a>
 
-
-[Voltar ao Índice](#indice)
-
----
-
-## <a name="parte6"></a>
-
+- https://code.visualstudio.com/
 
 [Voltar ao Índice](#indice)
 
 ---
 
-## <a name="parte7"></a>
+## <a name="parte7">Primeiro exemplo com PHP</a>
 
+01-PHP-Basico\primeiro-exemplo.php
+
+```php
+<?php
+
+echo 'School of net ';
+echo 'Iniciando com PHP';
+echo 450;
+echo 1000.02;
+```
 
 [Voltar ao Índice](#indice)
 
