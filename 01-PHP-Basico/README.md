@@ -187,14 +187,64 @@ Iniciando com PHP
 
 ---
 
-## <a name="parte10"></a>
+## <a name="parte10">Como o compilador do PHP trabalha</a>
 
 
 [Voltar ao Índice](#indice)
 
 ---
 
-## <a name="parte11"></a>
+## <a name="parte11">Strings</a>
+
+- 01-PHP-Basico\11-string.php
+
+```php
+<?php
+
+echo "alsdjflksjdhfksdjfhkjh";
+echo "\n";
+
+$variavel = "School of Net
+asdfhgasjkdhfgajksdhfghjsdgfhjasdgfjasdgf
+asdfasdfasdfasdfasdfasdfasdf
+asjlkdfhalskdjfhalsjkdfhalskdjfhalsdkfjhasldkfjh
+";
+echo $variavel;
+echo "\n";
+$string1 = "School of Net";
+$string2 = "Iniciando com PHP";
+echo $string1 . $string2;
+echo "\n";
+echo "Luiz" . " Carlos";
+echo "\n";
+echo $string1 . ' ' . $string2;
+
+$string3 = $string1 . ' ' . $string2;
+$string3 = "School of Net Inciando com PHP";
+$string4 = "$string1 $string2";
+
+echo "\n";
+echo $string4;
+$string5 = '$string1 $string2';
+
+echo "\n";
+echo $string5;
+```
+
+```
+ php .\11-string.php
+alsdjflksjdhfksdjfhkjh
+School of Net
+asdfhgasjkdhfgajksdhfghjsdgfhjasdgfjasdgf
+asdfasdfasdfasdfasdfasdfasdf
+asjlkdfhalskdjfhalsjkdfhalskdjfhalsdkfjhasldkfjh
+
+School of NetIniciando com PHP
+Luiz Carlos
+School of Net Iniciando com PHP
+School of Net Iniciando com PHP
+$string1 $string2
+```
 
 
 [Voltar ao Índice](#indice)
