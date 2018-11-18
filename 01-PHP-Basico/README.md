@@ -139,8 +139,49 @@ echo "\n";
 
 ---
 
-## <a name="parte9"></a>
+## <a name="parte9">Variáveis e tipos de dados</a>
 
+- 01-PHP-Basico\09-Variaveis-e-tipos-de-dados.php
+
+```php
+<?php
+
+$nome = "School of Net";
+echo $nome;
+
+$nome = 'Iniciando com PHP';
+echo "\n";
+echo $nome;
+
+$nome = 5000;
+echo "\n";
+echo $nome;
+
+$numero = 5000;
+echo "\n";
+echo $numero;
+
+$NOME = 'school of net';
+$NOME234 = 'school of net outra variavel';
+$nome2213nome = 'asdfasdf';
+$primeiro_nome = 'luiz';
+$primeiroNome = 'luiz';
+$variavelTrue = true; //booleano
+$variavelFalse = false;
+echo "\n";
+
+echo $variavelTrue;
+echo "\n";
+echo $variavelFalse;
+
+/*
+School of Net
+Iniciando com PHP
+5000
+5000
+1
+ */
+```
 
 [Voltar ao Índice](#indice)
 
