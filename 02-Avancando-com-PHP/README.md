@@ -359,6 +359,89 @@ if ($planeta != false) {
 
 ## <a name="parte10">POST</a>
 
+- 02-Avancando-com-PHP\formulario.php
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Formulário com PHP</h1>
+        <hr>
+        <form action="recebe_formulario.php" method="post">
+            <label for="">Nome</label><br>
+            <input type="text" name="nome"><br><br>
+
+            <label for="">E-mail</label><br>
+            <input type="text" name="email"><br><br>
+            
+            <fieldset>
+                <legend>Área de interesse</legend>
+                <input type="checkbox" name="interesse[]" id="" value="informatica"> Informática <br>
+                <input type="checkbox" name="interesse[]" id="" value="esporte"> Esporte <br>
+                <input type="checkbox" name="interesse[]" id="" value="compras"> Compras <br>
+                <input type="checkbox" name="interesse[]" id="" value="moda"> Moda <br>
+                <input type="checkbox" name="interesse[]" id="" value="ciencia"> Ciência <br>
+                <input type="checkbox" name="interesse[]" id="" value="religiao"> Religião <br>
+            </fieldset>
+            <br>
+    <label for="">Onde Conheceu?</label><br>
+            <select name="onde_conheceu" id="">
+                <option value="">Selecione</option>
+                <option value="google">Google</option>
+                <option value="amigos">Amigos</option>
+                <option value="tv">TV</option>
+            </select>
+            <br><br>
+
+            <label for="">Mensagem</label><br>
+            <textarea name="mensagem" id="" cols="30" rows="10"></textarea>
+            <br><br>
+
+            <fieldset>
+                <legend>Redirecionar para:</legend>
+                <input type="radio" name="redirecionar" id="" value="home"> Home <br>
+                <input type="radio" name="redirecionar" id="" value="contato"> Contato <br>
+            </fieldset>
+
+            <hr>
+
+            <button type="submit">Enviar</button>
+
+</body>
+</html>
+```
+
+- 02-Avancando-com-PHP\recebe_formulario.php
+
+```php
+<?php 
+
+$nome = $_POST['nome'];
+$email = $_POST['email'];
+$interesses = $_POST['interesse'];
+$ondeConheceu = $_POST['onde_conheceu'];
+$mensagem = $_POST['mensagem'];
+$redirecionar = $_POST['redirecionar'];
+
+echo "<strong>Nome: </strong>" . $nome . "<br>";
+echo "<strong>E-mail:</strong> " . $email . "<br>";
+echo "<strong>Interesses:</strong><br>";
+
+echo "<ul>";
+foreach($interesses as $interesse){
+    echo "<li>$interesse</li>";
+}
+echo "</ul>";
+
+echo "<strong>Onde conheceu:</strong> " . $ondeConheceu . "<br>";
+echo "<strong>Eedirecionar:</strong> " . $redirecionar . "<br>";
+```
 
 [Voltar ao Índice](#indice)
 
