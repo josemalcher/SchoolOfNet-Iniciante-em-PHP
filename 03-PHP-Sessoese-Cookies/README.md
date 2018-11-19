@@ -131,6 +131,43 @@ $_SESSION['ultimo-acesso'] = null;
 
 ## <a name="parte8">Configurações e segurança de sessões</a>
 
+```php
+<?php
+// 60*60 segundos = tempo de vida | 0 padrão - ao fechar encerra sessão
+// 'pagina' 
+// dominio
+// https
+// http onlly
+session_set_cookie_params(0, '/', 'localhost' ,false, true);
+
+session_start();
+```
+
+```php
+<?php
+
+require __DIR__.'/session.php';
+
+$user = $_SESSION['user'] ?? null;
+
+if(!$user){
+    header('location: login.php');
+    exit;
+}
+
+?>
+<h1>Página Protegida</h1>
+<p>Olá, <?php echo $user['email']; ?></p>
+```
+
+```php
+<?php
+require __DIR__ . '/session.php';
+
+session_destroy();
+
+header('location: index.php');
+```
 
 [Voltar ao Índice](#indice)
 
