@@ -107,6 +107,16 @@ var_dump($_SESSION['usuario']);
 
 ## <a name="parte6">Destruindo sessão</a>
 
+```php
+<?php
+
+session_start();
+
+// session_destroy();
+// unset($_SESSION['ultimo-acesso']);
+
+$_SESSION['ultimo-acesso'] = null;
+```
 
 [Voltar ao Índice](#indice)
 
