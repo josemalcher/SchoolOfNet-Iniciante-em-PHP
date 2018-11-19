@@ -449,6 +449,19 @@ echo "<strong>Eedirecionar:</strong> " . $redirecionar . "<br>";
 
 ## <a name="parte11">Funções</a>
 
+- 02-Avancando-com-PHP\funcoes.php
+
+```php
+<?php
+
+function escrevaNome(){
+    echo "Bom dia  $nome!<br>";
+}
+
+escrevaNome("Joé");
+escrevaNome("Luci");
+escrevaNome("Maria");
+```
 
 [Voltar ao Índice](#indice)
 
