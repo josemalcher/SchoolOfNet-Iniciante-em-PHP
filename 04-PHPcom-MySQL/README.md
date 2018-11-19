@@ -1,106 +1,128 @@
-# Bootstrap 4 na prática
+# PHP com MySQL
 
-https://www.schoolofnet.com/curso-bootstrap-4/
+https://www.schoolofnet.com/curso/php/linguagem-php/php-com-mysql-rev2/
 
 ---
 
 ## <a name="indice">Índice</a>
 
-- [](#parte1)   
-- [](#parte2)   
-- [](#parte3)   
-- [](#parte4)   
-- [](#parte5)   
-- [](#parte6)   
-- [](#parte7)   
-- [](#parte8)   
-- [](#parte9)   
-- [](#parte10)   
-- [](#parte11)   
-- [](#parte12)   
-
-
+- [Introdução](#parte1)   
+- [Mysqli versus mysql](#parte2)   
+- [Instalando o MySQL](#parte3)   
+- [Ativando a extensao mysqli](#parte4)   
+- [Conectando no banco de dados](#parte5)   
+- [Introdução a conexões persistentes](#parte6)   
+- [Executando comandos no banco de dados](#parte7)   
+- [Listando dados do banco](#parte8)   
+- [SQL injection](#parte9)   
+- [Prepared statement](#parte10)   
+- [CRUD listando dados](#parte11)   
+- [CRUD visualizando um único usuário](#parte12)   
+- [CRUD removendo registros](#parte13)   
+- [CRUD inserindo dados](#parte14)   
+- [CRUD edição de registros](#parte15)   
 
 ---
 
-## <a name="parte1"></a>
+## <a name="parte1">Introdução</a>
 
 
 [Voltar ao Índice](#indice)
 
 ---
 
-## <a name="parte2"></a>
+## <a name="parte2">Mysqli versus mysql</a>
 
 
 [Voltar ao Índice](#indice)
 
 ---
 
-## <a name="parte3"></a>
+## <a name="parte3">Instalando o MySQL</a>
 
 
 [Voltar ao Índice](#indice)
 
 ---
 
-## <a name="parte4"></a>
+## <a name="parte4">Ativando a extensao mysqli</a>
 
 
 [Voltar ao Índice](#indice)
 
 ---
 
-## <a name="parte5"></a>
+## <a name="parte5">Conectando no banco de dados</a>
 
 
 [Voltar ao Índice](#indice)
 
 ---
 
-## <a name="parte6"></a>
+## <a name="parte6">Introdução a conexões persistentes</a>
 
 
 [Voltar ao Índice](#indice)
 
 ---
 
-## <a name="parte7"></a>
+## <a name="parte7">Executando comandos no banco de dados</a>
 
 
 [Voltar ao Índice](#indice)
 
 ---
 
-## <a name="parte8"></a>
+## <a name="parte8">Listando dados do banco</a>
 
 
 [Voltar ao Índice](#indice)
 
 ---
 
-## <a name="parte9"></a>
+## <a name="parte9">SQL injection</a>
 
 
 [Voltar ao Índice](#indice)
 
 ---
 
-## <a name="parte10"></a>
+## <a name="parte10">Prepared statement</a>
 
 
 [Voltar ao Índice](#indice)
 
 ---
 
-## <a name="parte11"></a>
+## <a name="parte11">CRUD listando dados</a>
 
 
 [Voltar ao Índice](#indice)
 
 ---
 
-## <a name="parte12"></a>
+## <a name="parte12">CRUD visualizando um único usuário</a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+## <a name="parte13">CRUD removendo registros</a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+## <a name="parte14">CRUD inserindo dados</a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+## <a name="parte15">CRUD edição de registros</a>
 
 
 [Voltar ao Índice](#indice)
