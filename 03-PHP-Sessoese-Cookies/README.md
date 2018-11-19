@@ -72,6 +72,34 @@ $_SESSION['nome_autor'] = 'JOSE MALCHER';
 
 ## <a name="parte5">Manipulando os dados na sessão</a>
 
+```php
+<?php
+
+session_start();
+
+//$_SESSION['nome_autor'] = 'JOSE MALCHER';
+/* 
+$_SESSION['usuario'] = [
+    'nome' => 'Jose Malcher',
+    'idade'=> 32,
+    'ativo' => true,
+    'rate' => 4.3
+]; 
+*/
+
+unset($_SESSION['usuario']);
+
+$_SESSION['usuario'] = 'asd';
+
+```
+
+```
+<?php
+session_start();
+//var_dump($_COOKIE);
+var_dump(session_save_path());
+var_dump($_SESSION['usuario']);
+```
 
 [Voltar ao Índice](#indice)
 
