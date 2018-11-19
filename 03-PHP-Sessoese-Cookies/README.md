@@ -55,6 +55,16 @@ var_dump($_COOKIE);
 
 ## <a name="parte4">Criando sessões</a>
 
+- 03-PHP-Sessoese-Cookies\index.php
+
+```php
+<?php
+session_save_path(__DIR__.'./sessions');
+session_start();
+
+$_SESSION['nome_autor'] = 'JOSE MALCHER';
+
+```
 
 [Voltar ao Índice](#indice)
 

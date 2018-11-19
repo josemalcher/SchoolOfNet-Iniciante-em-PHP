@@ -1,3 +1,5 @@
 <?php
+session_save_path(__DIR__.'./sessions');
+session_start();
 
-setcookie('meuNome', 'Jose Malcher Jr', time() + (3600 * 24));
+$_SESSION['nome_autor'] = 'JOSE MALCHER';
