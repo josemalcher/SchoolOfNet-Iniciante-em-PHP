@@ -469,6 +469,20 @@ escrevaNome("Maria");
 
 ## <a name="parte12">Funções - Retorno</a>
 
+- 02-Avancando-com-PHP\funcoes_retorno.php
+
+```php
+<?php
+
+function soma($a = 0 , $b = 0){
+    return $a + $b;
+}
+
+$a = 10;
+$b = 20;
+//$resultado = soma($a, $b);
+echo "A SOMA de $a e $b = " . soma($a,$b);
+```
 
 [Voltar ao Índice](#indice)
 
