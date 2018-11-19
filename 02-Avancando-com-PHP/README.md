@@ -254,6 +254,36 @@ Pêra
 
 ## <a name="parte8">Laços de Repetição - Foreach</a>
 
+- 02-Avancando-com-PHP\foreach.php
+
+```php
+<?php
+$planetas = [
+    "Mercúrio",
+    "Vênus",
+    "Terra",
+    "Marte",
+    "Júpiter",
+    "Saturno",
+    "Urano",
+    "Netuno"
+];
+
+foreach ($planetas as $planeta) {
+    echo $planeta . "<br>";
+} 
+
+/* 
+Mercúrio
+Vênus
+Terra
+Marte
+Júpiter
+Saturno
+Urano
+Netuno
+*/
+```
 
 [Voltar ao Índice](#indice)
 
