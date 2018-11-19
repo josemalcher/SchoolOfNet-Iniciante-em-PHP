@@ -75,6 +75,49 @@ if ($a >= $b) {
 
 ## <a name="parte4">Condicionais - Operadores Lógicos</a>
 
+![](02-Avancando-com-PHP/img/operadores-logicos.png)
+
+![](02-Avancando-com-PHP/img/operadores-logicos_e.png)
+
+![](02-Avancando-com-PHP/img/operadores-logicos_ou.png)
+
+![](02-Avancando-com-PHP/img/operadores-logicos_negacao.png)
+
+
+```php
+<?php
+$media = 7;
+$frequencia = 75;
+$media_aluno = 3;
+$frequencia_aluno = 50;
+
+if ($media_aluno >= $media || $frequencia_aluno >= $frequencia) {
+    echo "Aprovado!";
+} else {
+    echo "Reprovado!";
+}
+echo "\n";
+if ($media_aluno >= $media && $frequencia_aluno >= $frequencia) {
+    echo "Aprovado!";
+} else {
+    echo "Reprovado!";
+}
+echo "\n";
+$chovendo = true;
+if (!$chovendo) {
+    echo "Vou ficar em casa!";
+} else {
+    echo "Vou pra piscina!";
+}
+
+ /*
+ Reprovado!
+ Reprovado!
+ Vou pra piscina!
+ */
+
+```
+
 
 [Voltar ao Índice](#indice)
 
