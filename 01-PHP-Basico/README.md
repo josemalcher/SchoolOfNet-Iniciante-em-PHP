@@ -363,7 +363,7 @@ $array1[3];
 
 - 01-PHP-Basico\15-arrays-chave-valor.php
 
-```
+```php
 <?php
 //array chaves - 0 1 2 3 4 5
 //array - chaves e valores
@@ -421,14 +421,15 @@ array(6) {
 
 ---
 
-## <a name="parte16"></a>
+## <a name="parte16">PHP no browser</a>
 
+![](img/arquitetura.png)
 
 [Voltar ao Índice](#indice)
 
 ---
 
-## <a name="parte17"></a>
+## <a name="parte17">PHP com HTML</a>
 
 
 [Voltar ao Índice](#indice)
