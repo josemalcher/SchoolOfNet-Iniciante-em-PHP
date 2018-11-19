@@ -455,8 +455,37 @@ $html = "<h1>Iniciando com PHP</h1>";
 
 ---
 
-## <a name="parte18"></a>
+## <a name="parte18">Passando informações entre páginas</a>
 
+
+```php
+<?php 
+//HTTP - GET e POST
+var_dump($_GET);
+var_dump($_POST);
+?>
+
+<h1><?php //echo $_GET['nome']?></h1>
+<h1><?php echo $_POST['nome'] ?></h1>
+```
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form action="18-recebe-info.php" method="POST">
+        <input type="text" name="nome">
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>
+```
 
 [Voltar ao Índice](#indice)
 
