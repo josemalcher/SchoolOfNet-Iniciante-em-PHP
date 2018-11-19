@@ -517,6 +517,13 @@ echo $mensagem;
 
 ## <a name="parte14">$_SERVER, $_REQUEST, Cliente / Servidor</a>
 
+```php
+<form method="post" action="request.php?cor=vermelho">
+
+<input type="text" name="cor">
+
+</form>
+```
 
 [Voltar ao Índice](#indice)
 
