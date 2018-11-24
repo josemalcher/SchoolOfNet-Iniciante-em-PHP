@@ -33,6 +33,8 @@ https://www.schoolofnet.com/curso/php/linguagem-php/php-com-mysql-rev2/
 
 ## <a name="parte2">Mysqli versus mysql</a>
 
+- https://secure.php.net/manual/pt_BR/book.mysqli.php
+
 
 [Voltar ao Índice](#indice)
 
@@ -40,6 +42,7 @@ https://www.schoolofnet.com/curso/php/linguagem-php/php-com-mysql-rev2/
 
 ## <a name="parte3">Instalando o MySQL</a>
 
+- https://www.mysql.com/
 
 [Voltar ao Índice](#indice)
 
@@ -54,6 +57,20 @@ https://www.schoolofnet.com/curso/php/linguagem-php/php-com-mysql-rev2/
 
 ## <a name="parte5">Conectando no banco de dados</a>
 
+```php
+<?php
+
+$conn = new mysqli('localhost', 'root', '', 'schoolofnet_phpcommysql1');
+
+if ($conn->connect_errno) {
+    die("FALHOU em conectar :" . $conn->connect_errno . ' / ' . $conn->connect_error);
+}
+echo $conn->host_info;
+
+
+
+
+```
 
 [Voltar ao Índice](#indice)
 
