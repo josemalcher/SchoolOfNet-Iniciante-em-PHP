@@ -14,9 +14,21 @@ if(!$conn->query($sql)){
 
 echo '<br>';
 
-$result = $conn->query('INSERT INTO users (email) VALUE ("jose@jose.com")');
 
-var_dump($result);
+//$result = $conn->query('INSERT INTO users (email) VALUE ("jose@jose.com")');
+
+//var_dump($result);
+
+$result = $conn->query('SELECT * FROM users');
+
+$users = $result->fetch_all(MYSQLI_ASSOC);
+
+foreach ($users as $user){
+    echo $user['id'] . ' - ' . $user['email'] . '</br>';
+}
+
+echo '<pre>';
+var_dump($users);
 
 
 

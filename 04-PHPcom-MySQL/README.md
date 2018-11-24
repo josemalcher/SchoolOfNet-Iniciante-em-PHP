@@ -118,9 +118,6 @@ $result = $conn->query('INSERT INTO users (email) VALUE ("jose@jose.com")');
 
 var_dump($result);
 
-
-
-
 ```
 
 [Voltar ao Índice](#indice)
@@ -129,6 +126,62 @@ var_dump($result);
 
 ## <a name="parte8">Listando dados do banco</a>
 
+```php
+<?php
+
+$conn = new mysqli('localhost', 'root', '', 'schoolofnet_phpcommysql1');
+
+if ($conn->connect_errno) {
+    die("FALHOU em conectar :" . $conn->connect_errno . ' / ' . $conn->connect_error);
+}
+
+$sql = 'CREATE TABLE users (id INT AUTO_INCREMENT PRIMARY KEY, email VARCHAR(255) NOT NULL)';
+
+if(!$conn->query($sql)){
+    echo 'Tabela já foi criada';
+}
+
+echo '<br>';
+
+
+//$result = $conn->query('INSERT INTO users (email) VALUE ("jose@jose.com")');
+
+//var_dump($result);
+
+$result = $conn->query('SELECT * FROM users');
+
+$users = $result->fetch_all(MYSQLI_ASSOC);
+
+foreach ($users as $user){
+    echo $user['id'] . ' - ' . $user['email'] . '</br>';
+}
+
+echo '<pre>';
+var_dump($users);
+
+```
+
+```
+1 - jose@jose.com
+2 - jose@jose.com
+array(2) {
+  [0]=>
+  array(2) {
+    ["id"]=>
+    string(1) "1"
+    ["email"]=>
+    string(13) "jose@jose.com"
+  }
+  [1]=>
+  array(2) {
+    ["id"]=>
+    string(1) "2"
+    ["email"]=>
+    string(13) "jose@jose.com"
+  }
+}
+Tabela já foi criada
+```
 
 [Voltar ao Índice](#indice)
 
