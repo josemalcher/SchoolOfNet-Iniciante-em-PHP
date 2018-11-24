@@ -260,6 +260,60 @@ foreach ($users as $user) {
 
 ## <a name="parte11">CRUD listando dados</a>
 
+- 04-PHPcom-MySQL/crud/connection.php
+
+```php
+<?php
+
+$conn = new mysqli('localhost', 'root', '', 'schoolofnet_phpcommysql1');
+if ($conn->connect_errno) {
+    die('Falhou em conectar: (' . $conn->connect_errno . ') ' . $conn->connect_error);
+}
+return $conn;
+```
+
+- 04-PHPcom-MySQL/crud/index.php 
+
+
+```php
+<?php
+
+$conn = require 'connection.php';
+$result = $conn->query('SELECT * FROM users');
+$users = $result->fetch_all(MYSQLI_ASSOC);
+
+?>
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>CRUD PHP MYSQL</title>
+</head>
+<body>
+<table>
+    <thead>
+    <tr>
+        <th>id</th>
+        <th>email</th>
+        <th>Ação</th>
+    </tr>
+    </thead>
+    <tbody>
+    <?php foreach ($users as $user) : ?>
+        <tr>
+            <td><?php echo $user['id']; ?></td>
+            <td><?php echo $user['email']; ?></td>
+            <td>
+                <a href="/crud/ver.php?id=<?php echo $user['id']; ?>">ver</a>
+            </td>
+        </tr>
+    <?php endforeach; ?>
+    </tbody>
+</table>
+</body>
+</html>
+```
 
 [Voltar ao Índice](#indice)
 
