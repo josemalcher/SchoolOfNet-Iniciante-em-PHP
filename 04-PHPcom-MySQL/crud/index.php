@@ -27,7 +27,7 @@ $users = $result->fetch_all(MYSQLI_ASSOC);
             <td><?php echo $user['id']; ?></td>
             <td><?php echo $user['email']; ?></td>
             <td>
-                <a href="/crud/ver.php?id=<?php echo $user['id']; ?>">ver</a>
+                <a href="http://localhost/schoolOfNet-Iniciante-em-PHP/04-PHPcom-MySQL/crud/ver.php?id=<?php echo $user['id']; ?>">ver</a>
             </td>
         </tr>
     <?php endforeach; ?>
