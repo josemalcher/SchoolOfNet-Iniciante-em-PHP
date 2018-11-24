@@ -1,6 +1,6 @@
 <?php
 
-$conn = require ('connection.php');
+$conn = require('connection.php');
 
 $id = $_GET['id'] ?? null;
 
@@ -23,7 +23,11 @@ $user = $result->fetch_assoc();
 <h1><?php echo $user['email']; ?></h1>
 
 <p>O id deste usuário é <?php echo $user['id']; ?></p>
-
+<p>
+        <a href="http://localhost/schoolOfNet-Iniciante-em-PHP/04-PHPcom-MySQL/crud/editar.php?id=<?php echo $user['id']; ?>">editar</a>
+        <a href="http://localhost/schoolOfNet-Iniciante-em-PHP/04-PHPcom-MySQL/crud/remover.php?id=<?php echo $user['id']; ?>">remover</a>
+    </p>
+    
 <p><a href="http://localhost/schoolOfNet-Iniciante-em-PHP/04-PHPcom-MySQL/crud/">voltar</a></p>
 </body>
 </html>
