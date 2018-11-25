@@ -33,5 +33,6 @@ $users = $result->fetch_all(MYSQLI_ASSOC);
     <?php endforeach; ?>
     </tbody>
 </table>
+<p><a href="http://localhost/schoolOfNet-Iniciante-em-PHP/04-PHPcom-MySQL/crud/adicionar.php">adicionar</a></p>
 </body>
 </html>
