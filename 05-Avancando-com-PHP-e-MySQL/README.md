@@ -34,6 +34,16 @@ https://www.schoolofnet.com/curso/php/linguagem-php/avancando-com-php-e-mysql/
 
 ## <a name="parte2">Conectando no banco de dados</a>
 
+```php
+<?php
+
+$conn = new mysqli('localhost', 'root', '', 'schoolofnet_avancando-com-php-e-mysql');
+
+if($conn->connect_errno){
+    die('FALHOU em conectar: ' . $conn->connect_errno);
+}
+return $conn;
+```
 
 [Voltar ao Índice](#indice)
 
