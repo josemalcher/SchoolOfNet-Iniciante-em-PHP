@@ -148,6 +148,10 @@ foreach ($posts as $post){
 
 ## <a name="parte6">Buscando parte de uma string</a>
 
+```php
+    $term = $argv[1] ?? null;
+    $term = '%'.$term .'%';
+```
 
 [Voltar ao Índice](#indice)
 
@@ -155,6 +159,45 @@ foreach ($posts as $post){
 
 ## <a name="parte7">Busca por relevância</a>
 
+```php
+<?php
+
+$conn = require __DIR__.'/utils/connection.php';
+
+$term = $argv[1] ?? null;
+$term = '%'.$term .'%';
+
+$stmt = $conn->prepare('SELECT *, MATCH(title, body) AGAINST(? IN BOOLEAN MODE) as score FROM posts ORDER BY score DESC;');
+$stmt->bind_param('s', $term);
+$stmt->execute();
+
+$result = $stmt->get_result();
+
+$posts = $result->fetch_all(MYSQLI_ASSOC);
+
+foreach ($posts as $post){
+    echo $post['title'] . PHP_EOL;
+    echo $post['body'] . PHP_EOL;
+    echo $post['score']. PHP_EOL;
+    echo PHP_EOL;
+}
+
+```
+
+```
+$php search_full_text.php cakephp
+CakePHP
+Framework de desenvolvimento rápido
+1
+
+Laravel framework
+O Laravel é muito utilizado hoje em dia
+0
+
+Slim Framework
+Micro framework, podemos utilizar o Eloquent do Laravel nele
+0
+```
 
 [Voltar ao Índice](#indice)
 
