@@ -79,6 +79,39 @@ var_dump($result->fetch_all());
 
 ## <a name="parte4">Inserindo registros</a>
 
+```php
+<?php
+
+$conn = require __DIR__.'/utils/connection.php';
+
+$conn->query('TRUNCATE posts');
+
+$sql = file_get_contents(__DIR__.'/sql/insert_posts.sql');
+
+$conn->query($sql);
+
+$result = $conn->query('SELECT * FROM posts');
+
+$posts = $result->fetch_all(MYSQLI_ASSOC);
+
+foreach($posts as $post){
+    echo $post['title'].PHP_EOL;
+    echo $post['body'] . PHP_EOL;
+    echo PHP_EOL;
+}
+```
+
+```
+$ php insert_post.php
+Laravel framework
+O Laravel é muito utilizado hoje em dia
+
+CakePHP
+Framework de desenvolvimento rápido
+
+Slim Framework
+Micro framework, podemos utilizar o Eloquent do Laravel nele
+```
 
 [Voltar ao Índice](#indice)
 
