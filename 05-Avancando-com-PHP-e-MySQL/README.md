@@ -277,6 +277,69 @@ return $conn;
 
 ## <a name="parte10">Introdução a relacionamentos</a>
 
+- 05-Avancando-com-PHP-e-MySQL\create_comments_table.php
+
+```php
+<?php
+
+$conn = require __DIR__.'/utils/connection.php';
+
+$conn->query('DROP TABLE comments');
+
+$sql = 'CREATE TABLE comments(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    email VARCHAR(100) NOT null,
+    comment TEXT NOT null,
+    post_id INT NOT null,
+    FOREIGN KEY(post_id) REFERENCES posts(id)
+    )
+';
+
+if(!$conn->query($sql)){
+    die('Error: table existis');
+}
+
+$result = $conn->query('DESCRIBE comments');
+
+var_dump($result);
+
+```
+
+- 05-Avancando-com-PHP-e-MySQL\insert_comments.php
+
+```php
+<?php
+
+$conn = require __DIR__.'/utils/connection.php';
+
+$save  = true;
+
+$conn->query('TRUNCATE comments');
+
+$sql = file_get_contents(__DIR__. '/sql/insert_comments.sql');
+
+$conn->begin_transaction();
+$conn->query($sql);
+
+if ($save) {
+    $conn->commit();
+} else {
+    $conn->rollback();
+}
+echo 'START SELECT' . PHP_EOL;
+$result = $conn->query('SELECT * FROM comments');
+$comments = $result->fetch_all(MYSQLI_ASSOC);
+foreach ($comments as $post) {
+    echo $post['email'] . PHP_EOL;
+    echo $post['comment'] . PHP_EOL;
+    echo $post['post_id'] . PHP_EOL;
+    echo PHP_EOL;
+}
+echo 'END SELECT' . PHP_EOL;
+
+```
+
+
 
 [Voltar ao Índice](#indice)
 
