@@ -1,10 +1,10 @@
 <?php
-    if($_SERVER['REQUEST_METHOD'] == 'POST'){
-        
-        $idade = (int)$_POST['idade'];
-        if($idade < 18){
-            die('não tem pemissão');
-        }
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+    $idade = (int)$_POST['idade'];
+    if ($idade < 18) {
+        die('não tem pemissão');
+    }
     $idade_string = (string)$idade;
     var_dump($idade_string, $idade);
 
@@ -12,7 +12,7 @@
 
     exit;
 
-    }
+}
 ?>
 
 <!DOCTYPE html>
