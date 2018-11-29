@@ -1,3 +1,10 @@
+<?php
+    if($_SERVER['REQUEST_METHOD'] == 'POST'){
+        echo 'o form foi enviado pelo '. $_POST['nome'];
+        exit;
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -12,5 +19,7 @@
         <input type="submit" name="enviar">
     </form>
     <a href="index.php?nome=Jose">NOME-GET</a>
+    <br>
+    <p>O <?php echo $_GET['nome'];?> clicou no link acima</p>
 </body>
 </html>
