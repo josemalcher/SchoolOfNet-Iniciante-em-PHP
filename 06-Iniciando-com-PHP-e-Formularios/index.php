@@ -1,11 +1,22 @@
 <?php
     if($_SERVER['REQUEST_METHOD'] == 'POST'){
+
+        //$idade = (isset($_POST['idade'])) ? $_POST['idade'] : null
         
-        $idade = (int)$_POST['idade'];
+        // null coalesciong operator
+        $idade = $_POST['idade'] ?? null;
+
+        if(is_null($idade) || $idade == ''){
+            die('idade não informada');
+        }
+
+        $idade = (int)$idade;
+        
         if($idade < 18){
             die('não tem pemissão');
         }
     $idade_string = (string)$idade;
+    
     var_dump($idade_string, $idade);
 
     echo 'ok, idade é: ' . $idade;
