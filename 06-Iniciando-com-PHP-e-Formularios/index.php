@@ -1,29 +1,20 @@
 <?php
-    if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
-        //$idade = (isset($_POST['idade'])) ? $_POST['idade'] : null
-        
-        // null coalesciong operator
-        $idade = $_POST['idade'] ?? null;
-
-        if(is_null($idade) || $idade == ''){
-            die('idade não informada');
-        }
-
-        $idade = (int)$idade;
-        
-        if($idade < 18){
-            die('não tem pemissão');
-        }
-    $idade_string = (string)$idade;
-    
-    var_dump($idade_string, $idade);
-
-    echo 'ok, idade é: ' . $idade;
-
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $nome = $_POST['nome'] ?? null;
+    $nome = trim($nome);
+    $nome = stripslashes($nome);
+    $nome = htmlspecialchars($nome);
+    echo $nome;
     exit;
-
-    }
+}
+/*
+ * < => &lt
+ * > => &gt
+ * " => &quote
+ * ' => &#039
+ * & => &amp
+ */
 ?>
 
 <!DOCTYPE html>
@@ -36,7 +27,7 @@
 </head>
 <body>
      <form action="index.php" method="post">
-        <input type="text" name="idade">
+        <input type="text" name="nome">
         <input type="submit" value="enviar">
     </form>
 </body>
