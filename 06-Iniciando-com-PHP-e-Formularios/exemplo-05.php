@@ -4,7 +4,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $idade = filter_input(INPUT_POST, 'idade', FILTER_SANITIZE_NUMBER_INT);
     var_dump($nome);
     var_dump($idade);
-    
+
     $data = filter_input_array(INPUT_POST, FILTER_VALIDATE_EMAIL);
     var_dump($data);
     exit;
