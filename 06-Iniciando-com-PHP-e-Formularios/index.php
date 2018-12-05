@@ -1,10 +1,9 @@
 <?php
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    extract($_POST);
-    var_dump($nome, $idade);
-    $data = compact('nome', 'idade', '_POST');
-    var_dump($data);
+    var_dump($_POST);
+    var_dump($_GET);
+    var_dump($_REQUEST);
     exit;
 }
 ?>
@@ -17,11 +16,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <title>Document</title>
 </head>
 <body>
-<form action="index.php" method="post">
+<form action="index.php?page=sobre-nos&nome=Outro" method="post">
     <input type="text" name="nome">
-    <input type="text" name="idade">
     <input type="submit" value="enviar">
 </form>
-
 </body>
 </html>
