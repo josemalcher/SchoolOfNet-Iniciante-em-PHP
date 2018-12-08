@@ -16,6 +16,7 @@
         <input type="hidden" name="_csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>">
         <input type="text" name="nome" placeholder="Nome"><br>
         <input type="email" name="email" placeholder="Email"><br>
+        <input type="text" name="url" placeholder="Seu Site"><br>
         <textarea name="descricao" cols="30" rows="10" placeholder="Descrição"></textarea><br>
         <img src="captcha.php"><br>
         <input name="_captcha" type="text" placeholder="Digite as letras em ninusculos"><br>
