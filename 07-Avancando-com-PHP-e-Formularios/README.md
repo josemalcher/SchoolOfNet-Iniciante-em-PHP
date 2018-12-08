@@ -11,7 +11,6 @@ Neste curso, apresentaremos práticas diversas para aplicar em formulários no P
 - [Introdução](#parte1)   
 - [Conhecendo a mecânica do envio do formulários](#parte2)   
 - [Header content type](#parte3)   
-- [Header content type](#parte4)   
 - [php://input](#parte5)   
 - [Se protegendo de invasões CSRF](#parte6)   
 - [Protegendo com captcha](#parte7)   
@@ -63,12 +62,7 @@ var_dump($nome,$email, $descricao);
 
 ## <a name="parte3">Header content type</a>
 
-
-[Voltar ao Índice](#indice)
-
----
-
-## <a name="parte4">Header content type</a>
+- https://www.getpostman.com/
 
 
 [Voltar ao Índice](#indice)
@@ -77,6 +71,52 @@ var_dump($nome,$email, $descricao);
 
 ## <a name="parte5">php://input</a>
 
+```php
+<?php
+
+$nome = filter_input(INPUT_POST, 'nome');
+$email = filter_input(INPUT_POST, 'email');
+$descricao = filter_input(INPUT_POST, 'descricao');
+
+var_dump('--FORM DATA--', $nome, $email, $descricao);
+
+$json = file_get_contents("php://input");
+$json = json_decode($json, true); // true -> array
+var_dump('--JSON--', $json);
+
+if (is_null($nome)) {
+    $nome = $json['nome'] ?? null;
+}
+if (is_null($email)) {
+    $email = $json['email'] ?? null;
+}
+if (is_null($descricao)) {
+    $descricao = $json['descricao'] ?? null;
+}
+
+var_dump('--FINAL--', $nome, $email, $descricao);
+```
+
+```
+string(13) "--FORM DATA--"
+NULL
+NULL
+NULL
+string(8) "--JSON--"
+array(3) {
+  ["nome"]=>
+  string(9) "jose json"
+  ["email"]=>
+  string(14) "email@jose.com"
+  ["descricao"]=>
+  string(9) "descricao"
+}
+string(9) "--FINAL--"
+string(9) "jose json"
+string(14) "email@jose.com"
+string(9) "descricao"
+
+```
 
 [Voltar ao Índice](#indice)
 
