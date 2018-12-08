@@ -17,6 +17,8 @@
         <input type="text" name="nome" placeholder="Nome"><br>
         <input type="email" name="email" placeholder="Email"><br>
         <textarea name="descricao" cols="30" rows="10" placeholder="Descrição"></textarea><br>
+        <img src="captcha.php"><br>
+        <input name="_captcha" type="text" placeholder="Digite as letras em ninusculos"><br>
         <input type="submit" value="Enviar">
     </form>
 </body>
