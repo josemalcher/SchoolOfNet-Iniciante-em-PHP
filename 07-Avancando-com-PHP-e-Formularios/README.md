@@ -28,6 +28,34 @@ Neste curso, apresentaremos práticas diversas para aplicar em formulários no P
 
 ## <a name="parte2">Conhecendo a mecânica do envio do formulários</a>
 
+```html
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Avançando com PHP e Formulários</title>
+</head>
+<body>
+    <form action="send.php" method="POST">
+        <input type="text" name="nome" placeholder="Nome"><br>
+        <input type="email" name="email" placeholder="Email"><br>
+        <textarea name="descricao" cols="30" rows="10" placeholder="Descrição"></textarea><br>
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>
+```
+
+```php
+<?php
+$nome = filter_input(INPUT_POST, 'nome');
+$email = filter_input(INPUT_POST, 'email');
+$descricao = filter_input(INPUT_POST, 'descricao');
+
+var_dump($nome,$email, $descricao);
+```
 
 [Voltar ao Índice](#indice)
 
