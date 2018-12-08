@@ -71,6 +71,8 @@ var_dump($nome,$email, $descricao);
 
 ## <a name="parte5">php://input</a>
 
+- 07-Avancando-com-PHP-e-Formularios\libs\geet_data.php
+
 ```php
 <?php
 
@@ -124,6 +126,30 @@ string(9) "descricao"
 
 ## <a name="parte6">Se protegendo de invasões CSRF</a>
 
+
+```php
+<?php
+    session_start();
+    $_SESSION['csrf_token'] = sha1(rand(1,20000));
+?>
+```
+
+```php
+<?php
+session_start();
+
+$csrf_token = $_SESSION['csrf_token'] ?? false;
+//var_dump($csrf_token);
+$val_token = filter_input(INPUT_POST, '_csrf_token');
+//var_dump($val_token);
+
+if (!$csrf_token or $csrf_token !== $val_token) {
+    die('CSRF token validation fail');
+}
+
+include 'libs/geet_data.php';
+
+```
 
 [Voltar ao Índice](#indice)
 
