@@ -69,10 +69,34 @@ Neste projeto prático vamos criar um site administrável com PHP com base em um
 
 ---
 
-
 ## <a name="parte1"> Definindo um document root</a>
 
+- 08-Criando-um-site-administravel-com-PHP/public/index.php
 
+```php
+<?php
+
+require __DIR__.'/../bootstrap.php';
+```
+
+- 08-Criando-um-site-administravel-com-PHP/bootstrap.php
+
+```php
+<?php
+
+echo "Olá Mundo!";
+```
+
+```
+> php -S localhost:8080 -t public/
+
+PHP 7.2.1 Development Server started at Tue Jan  8 00:23:44 2019
+Listening on http://localhost:8080
+Document root is C:\Users\josemalcher\Documents\01-SERVs\xampp_php7.2.1\htdocs\schoolOfNet-Iniciante-em-PHP\08-Criando-um-site-administrave
+l-com-PHP\public
+Press Ctrl-C to quit.
+
+```
 
 [Voltar ao Índice](#indice)
 
