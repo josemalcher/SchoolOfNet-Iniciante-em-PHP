@@ -201,7 +201,8 @@ if(resolve('/admin')){
 
 ## <a name="parte5"> Criando sistema de template</a>
 
-
+- 08-Criando-um-site-administravel-com-PHP/templates/admin/home.tpl.php
+- 08-Criando-um-site-administravel-com-PHP/templates/site/home.tpl.php
 
 [Voltar ao Índice](#indice)
 
@@ -210,7 +211,9 @@ if(resolve('/admin')){
 
 ## <a name="parte6"> Organizando funções</a>
 
-
+- 08-Criando-um-site-administravel-com-PHP/src/resolve-route.php
+- 08-Criando-um-site-administravel-com-PHP/src/render.php
+- 08-Criando-um-site-administravel-com-PHP/src/connection.php
 
 [Voltar ao Índice](#indice)
 
