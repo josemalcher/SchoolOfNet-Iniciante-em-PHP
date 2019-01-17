@@ -150,7 +150,49 @@ else{
 
 ## <a name="parte4"> URLs amigáveis dinâmicas</a>
 
+- 08-Criando-um-site-administravel-com-PHP/bootstrap.php
 
+```php
+<?php
+//!empty($_SERVER['PATH_INFO']) ? $_SERVER['PATH_INFO'] : '/';
+
+function resolve($route){
+    $path = $_SERVER['PATH_INFO'] ?? '/';
+    $route = '/^' . str_replace('/','\/', $route) . '$/';
+
+    if(preg_match($route, $path, $params)){
+        return $params;
+    }
+    return false;
+}
+
+if (resolve('/admin/?(.*)')){
+    require __DIR__.'/admin/routes.php';
+}elseif (resolve('/(.*)')){
+    require __DIR__.'/site/routes.php';
+}
+
+
+```
+
+- 08-Criando-um-site-administravel-com-PHP/admin/routes.php
+
+```php
+<?php
+/**
+ * Created by PhpStorm.
+ * User: josemalcher
+ * Date: 16/01/2019
+ * Time: 20:32
+ */
+if(resolve('/admin')){
+    echo 'Administração';
+}elseif (resolve('/admin/pages')){
+    echo 'Página Admin';
+}else{
+    echo 'Página não encontrada';
+}
+```
 
 [Voltar ao Índice](#indice)
 
