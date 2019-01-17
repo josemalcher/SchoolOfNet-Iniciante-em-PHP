@@ -6,9 +6,9 @@
  * Time: 20:32
  */
 if(resolve('/admin')){
-    echo 'Administração';
+    render('admin/home', 'admin');
 }elseif (resolve('/admin/pages')){
-    echo 'Página Admin';
+    render('admin/pages', 'admin');
 }else{
     echo 'Página não encontrada';
 }

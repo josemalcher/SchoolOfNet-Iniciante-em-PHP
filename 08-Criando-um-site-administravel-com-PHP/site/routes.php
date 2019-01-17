@@ -6,9 +6,9 @@
  * Time: 20:17
  */
 if(resolve('/')){
-    echo 'home';
+    render('site/home', 'site');
 }elseif (resolve('/contato')){
-    echo 'Página Contato';
+    render('site/contato', 'site');
 }else{
     echo 'Página não encontrada';
 }
