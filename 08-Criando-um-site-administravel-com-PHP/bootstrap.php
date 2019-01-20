@@ -1,5 +1,6 @@
 <?php
 
+require __DIR__.'/condig.php';
 require __DIR__.'/src/error_handle.php';
 require __DIR__.'/src/resolve-route.php';
 require __DIR__.'/src/render.php';

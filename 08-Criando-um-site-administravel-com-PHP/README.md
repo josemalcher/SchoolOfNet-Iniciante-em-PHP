@@ -231,7 +231,7 @@ if(resolve('/admin')){
 
 ## <a name="parte8"> Configurações da aplicação</a>
 
-
+- 08-Criando-um-site-administravel-com-PHP/condig.php
 
 [Voltar ao Índice](#indice)
 

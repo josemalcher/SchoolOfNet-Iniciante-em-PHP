@@ -8,4 +8,4 @@
 
 mysqli_report(MYSQLI_REPORT_ERROR);
 
-$conn = new mysqli('localhost', 'root', '', 'schoolofnet_cri_site_php');
+$conn = new mysqli(DB_SERVER, DB_USER, DB_PASSWD, DB_NAME);
