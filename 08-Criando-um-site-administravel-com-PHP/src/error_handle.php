@@ -7,7 +7,9 @@
  */
 
 function setInternalServerError($errno = null, $errstr = null, $errfile = null, $errline = null) {
+
     http_response_code(500);
+
     echo '<h1>Error</h1>';
     if (!DEBUG) {
         exit;

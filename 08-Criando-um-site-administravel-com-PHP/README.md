@@ -240,7 +240,12 @@ if(resolve('/admin')){
 
 ## <a name="parte9"> Retornando status code correto</a>
 
-
+```
+    http_response_code(500);
+    
+    http_response_code(404);
+    
+```
 
 [Voltar ao Índice](#indice)
 
