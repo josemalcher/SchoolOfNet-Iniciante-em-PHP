@@ -254,7 +254,7 @@ if(resolve('/admin')){
 
 ## <a name="parte10"> Adicionando bootstrap 4</a>
 
-
+- 08-Criando-um-site-administravel-com-PHP/templates/admin.tpl.php
 
 [Voltar ao Índice](#indice)
 
