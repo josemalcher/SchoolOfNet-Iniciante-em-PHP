@@ -327,6 +327,7 @@ if(resolve('/admin')){
 
 ## <a name="parte12"> Estilizando o template do painel de administração</a>
 
+- 08-Criando-um-site-administravel-com-PHP/public/css/style.css
 
 
 [Voltar ao Índice](#indice)
