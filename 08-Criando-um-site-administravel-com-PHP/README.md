@@ -444,6 +444,8 @@ if(resolve('/admin')){
 
 ## <a name="parte16"> Inserindo um editor de texto</a>
 
+- https://trix-editor.org/
+
 
 
 [Voltar ao Índice](#indice)

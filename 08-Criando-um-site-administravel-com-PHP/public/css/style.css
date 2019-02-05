@@ -29,3 +29,7 @@ html, body{
 #content{
     padding-top: 20px;
 }
+
+trix-editor{
+    min-height: 400px;
+}
