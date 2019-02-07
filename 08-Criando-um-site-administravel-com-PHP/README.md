@@ -7,57 +7,60 @@ Neste projeto prático vamos criar um site administrável com PHP com base em um
 
 ## <a name="indice">Índice</a>
 
-0. [Introdução](#parte0)     
-1. [Definindo um document root](#parte1)     
-2. [URLs amigáveis](#parte2)     
-3. [Separando URLs amigáveis do site e da administração](#parte3)     
-4. [URLs amigáveis dinâmicas](#parte4)     
-5. [Criando sistema de template](#parte5)     
-6. [Organizando funções](#parte6)     
-7. [Manipulando erros](#parte7)     
-8. [Configurações da aplicação](#parte8)     
-9. [Retornando status code correto](#parte9)     
-10. [Adicionando bootstrap 4](#parte10)     
-11. [Iniciando template do painel administrativo](#parte11)     
-12. [Estilizando o template do painel de administração](#parte12)     
-13. [Definindo rotas de administração de páginas](#parte13)     
-14. [Template de listagem de páginas](#parte14)     
-15. [Template de formulário de cadastro de página](#parte15)     
-16. [Inserindo um editor de texto](#parte16)     
-17. [Visualização de detalhes de página](#parte17)     
-18. [Formulario de edição de página](#parte18)     
-19. [Criando funções para integrar com o banco de dados](#parte19)     
-20. [Exibindo notificações de ação concluída](#parte20)     
-21. [Melhorando as notificações e incluindo confirmações de ação](#parte21)     
-22. [Criando banco de dados](#parte22)     
-23. [Listando registro](#parte23)     
-24. [Cadastrando registro](#parte24)     
-25. [Visualização de datalhes de um registro](#parte25)     
-26. [Edição de registro](#parte26)     
-27. [Remoção de registro](#parte27)     
-28. [Criando sessão de usuários](#parte28)     
-29. [Template de listagem de usuários](#parte29)     
-30. [Finalizando os templates](#parte30)     
-31. [Listando dados do banco](#parte31)     
-32. [Cadastro de usuários no banco](#parte32)     
-33. [Remoção de usuários](#parte33)     
-34. [Visualização de dados](#parte34)     
-35. [Edição de usuário](#parte35)     
-36. [Preparando o upload de imagens](#parte36)     
-37. [Barra de progresso de upload](#parte37)     
-38. [Finalizando o upload](#parte38)     
-39. [Finalizando o painel de administração](#parte39)     
-40. [Preparando HTML do login](#parte40)     
-41. [Criando login](#parte41)     
-42. [Finalizando o login](#parte42)     
-43. [Template do site](#parte43)     
-44. [Exibindo páginas do site](#parte44)     
-45. [Disparando email](#parte45)     
-46. [Sobre publicação do projeto](#parte46)     
-47. [Enviando os arquivos para o host compartilhado](#parte47)     
-48. [Conectando no banco de dados](#parte48)     
-49. [Finalizando](#parte49)     
-50. [Testando envio de email](#parte50)     
+- [Criando um site administrável com PHP](#criando-um-site-administr%C3%A1vel-com-php)
+  - [<a name="indice">Índice</a>](#a-name%22indice%22%C3%ADndicea)
+  - [- <a name="parte50"> Testando envio de email</a>](#a-name%22parte50%22-testando-envio-de-emaila)
+  - [<a name="parte0">Introdução</a>](#a-name%22parte0%22introdu%C3%A7%C3%A3oa)
+  - [<a name="parte1"> Definindo um document root</a>](#a-name%22parte1%22-definindo-um-document-roota)
+  - [<a name="parte2"> URLs amigáveis</a>](#a-name%22parte2%22-urls-amig%C3%A1veisa)
+  - [<a name="parte3"> Separando URLs amigáveis do site e da administração</a>](#a-name%22parte3%22-separando-urls-amig%C3%A1veis-do-site-e-da-administra%C3%A7%C3%A3oa)
+  - [<a name="parte4"> URLs amigáveis dinâmicas</a>](#a-name%22parte4%22-urls-amig%C3%A1veis-din%C3%A2micasa)
+  - [<a name="parte5"> Criando sistema de template</a>](#a-name%22parte5%22-criando-sistema-de-templatea)
+  - [<a name="parte6"> Organizando funções</a>](#a-name%22parte6%22-organizando-fun%C3%A7%C3%B5esa)
+  - [<a name="parte7"> Manipulando erros</a>](#a-name%22parte7%22-manipulando-errosa)
+  - [<a name="parte8"> Configurações da aplicação</a>](#a-name%22parte8%22-configura%C3%A7%C3%B5es-da-aplica%C3%A7%C3%A3oa)
+  - [<a name="parte9"> Retornando status code correto</a>](#a-name%22parte9%22-retornando-status-code-corretoa)
+  - [<a name="parte10"> Adicionando bootstrap 4</a>](#a-name%22parte10%22-adicionando-bootstrap-4a)
+  - [<a name="parte11"> Iniciando template do painel administrativo</a>](#a-name%22parte11%22-iniciando-template-do-painel-administrativoa)
+  - [<a name="parte12"> Estilizando o template do painel de administração</a>](#a-name%22parte12%22-estilizando-o-template-do-painel-de-administra%C3%A7%C3%A3oa)
+  - [<a name="parte13"> Definindo rotas de administração de páginas</a>](#a-name%22parte13%22-definindo-rotas-de-administra%C3%A7%C3%A3o-de-p%C3%A1ginasa)
+  - [<a name="parte14"> Template de listagem de páginas</a>](#a-name%22parte14%22-template-de-listagem-de-p%C3%A1ginasa)
+  - [<a name="parte15"> Template de formulário de cadastro de página</a>](#a-name%22parte15%22-template-de-formul%C3%A1rio-de-cadastro-de-p%C3%A1ginaa)
+  - [<a name="parte16"> Inserindo um editor de texto</a>](#a-name%22parte16%22-inserindo-um-editor-de-textoa)
+  - [<a name="parte17"> Visualização de detalhes de página</a>](#a-name%22parte17%22-visualiza%C3%A7%C3%A3o-de-detalhes-de-p%C3%A1ginaa)
+  - [<a name="parte18"> Formulario de edição de página</a>](#a-name%22parte18%22-formulario-de-edi%C3%A7%C3%A3o-de-p%C3%A1ginaa)
+  - [<a name="parte19"> Criando funções para integrar com o banco de dados</a>](#a-name%22parte19%22-criando-fun%C3%A7%C3%B5es-para-integrar-com-o-banco-de-dadosa)
+  - [<a name="parte20"> Exibindo notificações de ação concluída</a>](#a-name%22parte20%22-exibindo-notifica%C3%A7%C3%B5es-de-a%C3%A7%C3%A3o-conclu%C3%ADdaa)
+  - [<a name="parte21"> Melhorando as notificações e incluindo confirmações de ação</a>](#a-name%22parte21%22-melhorando-as-notifica%C3%A7%C3%B5es-e-incluindo-confirma%C3%A7%C3%B5es-de-a%C3%A7%C3%A3oa)
+  - [<a name="parte22"> Criando banco de dados</a>](#a-name%22parte22%22-criando-banco-de-dadosa)
+  - [<a name="parte23"> Listando registro</a>](#a-name%22parte23%22-listando-registroa)
+  - [<a name="parte24"> Cadastrando registro</a>](#a-name%22parte24%22-cadastrando-registroa)
+  - [<a name="parte25"> Visualização de datalhes de um registro</a>](#a-name%22parte25%22-visualiza%C3%A7%C3%A3o-de-datalhes-de-um-registroa)
+  - [<a name="parte26"> Edição de registro</a>](#a-name%22parte26%22-edi%C3%A7%C3%A3o-de-registroa)
+  - [<a name="parte27"> Remoção de registro</a>](#a-name%22parte27%22-remo%C3%A7%C3%A3o-de-registroa)
+  - [<a name="parte28"> Criando sessão de usuários</a>](#a-name%22parte28%22-criando-sess%C3%A3o-de-usu%C3%A1riosa)
+  - [<a name="parte29"> Template de listagem de usuários</a>](#a-name%22parte29%22-template-de-listagem-de-usu%C3%A1riosa)
+  - [<a name="parte30"> Finalizando os templates</a>](#a-name%22parte30%22-finalizando-os-templatesa)
+  - [<a name="parte31"> Listando dados do banco</a>](#a-name%22parte31%22-listando-dados-do-bancoa)
+  - [<a name="parte32"> Cadastro de usuários no banco</a>](#a-name%22parte32%22-cadastro-de-usu%C3%A1rios-no-bancoa)
+  - [<a name="parte33"> Remoção de usuários</a>](#a-name%22parte33%22-remo%C3%A7%C3%A3o-de-usu%C3%A1riosa)
+  - [<a name="parte34"> Visualização de dados</a>](#a-name%22parte34%22-visualiza%C3%A7%C3%A3o-de-dadosa)
+  - [<a name="parte35"> Edição de usuário</a>](#a-name%22parte35%22-edi%C3%A7%C3%A3o-de-usu%C3%A1rioa)
+  - [<a name="parte36"> Preparando o upload de imagens</a>](#a-name%22parte36%22-preparando-o-upload-de-imagensa)
+  - [<a name="parte37"> Barra de progresso de upload</a>](#a-name%22parte37%22-barra-de-progresso-de-uploada)
+  - [<a name="parte38"> Finalizando o upload</a>](#a-name%22parte38%22-finalizando-o-uploada)
+  - [<a name="parte39"> Finalizando o painel de administração</a>](#a-name%22parte39%22-finalizando-o-painel-de-administra%C3%A7%C3%A3oa)
+  - [<a name="parte40"> Preparando HTML do login</a>](#a-name%22parte40%22-preparando-html-do-logina)
+  - [<a name="parte41"> Criando login</a>](#a-name%22parte41%22-criando-logina)
+  - [<a name="parte42"> Finalizando o login</a>](#a-name%22parte42%22-finalizando-o-logina)
+  - [<a name="parte43"> Template do site</a>](#a-name%22parte43%22-template-do-sitea)
+  - [<a name="parte44"> Exibindo páginas do site</a>](#a-name%22parte44%22-exibindo-p%C3%A1ginas-do-sitea)
+  - [<a name="parte45"> Disparando email</a>](#a-name%22parte45%22-disparando-emaila)
+  - [<a name="parte46"> Sobre publicação do projeto</a>](#a-name%22parte46%22-sobre-publica%C3%A7%C3%A3o-do-projetoa)
+  - [<a name="parte47"> Enviando os arquivos para o host compartilhado</a>](#a-name%22parte47%22-enviando-os-arquivos-para-o-host-compartilhadoa)
+  - [<a name="parte48"> Conectando no banco de dados</a>](#a-name%22parte48%22-conectando-no-banco-de-dadosa)
+  - [<a name="parte49"> Finalizando</a>](#a-name%22parte49%22-finalizandoa)
+  - [<a name="parte50"> Testando envio de email</a>](#a-name%22parte50%22-testando-envio-de-emaila)
 ---
 
 
@@ -455,7 +458,40 @@ if(resolve('/admin')){
 
 ## <a name="parte17"> Visualização de detalhes de página</a>
 
+- templates\admin\pages\view.tpl.php
 
+```html
+<h3 class="mb-5">Página Adminitração</h3>
+
+<div class="row">
+    <div class="col-3">
+        <dl class="row">
+            <dt class="col-sm-4">Título</dt>
+            <dd class="col-sm-8">Página inicial</dd>
+
+            <dt class="col-sm-4">URL</dt>
+            <dd class="col-sm-8">/ - <a href="/" target="blank">abrir</a></dd>
+
+            <dt class="col-sm-4">Criado em</dt>
+            <dd class="col-sm-8">2018-02-06 22:30</dd>
+
+            <dt class="col-sm-4">Atualizado em</dt>
+            <dd class="col-sm-8">2018-02-06 23:30</dd>
+        </dl>
+    </div>
+    <div class="col bg-light">
+        <h3>Página inicial</h3>
+        <p>Está é a página inicilal do site</p>
+    </div>
+</div>
+<p>
+    <a href="/admin/pages/1/edit" class="btn btn-primary">Editar</a>
+    <a href="/admin/pages/1/delete" class="btn btn-danger">Remover</a>
+</p>
+
+
+<a href="/admin/pages" class="btn btn-secondary">Admin Páginas</a>
+```
 
 [Voltar ao Índice](#indice)
 
