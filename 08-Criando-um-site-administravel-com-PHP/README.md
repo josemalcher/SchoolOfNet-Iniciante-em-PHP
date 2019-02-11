@@ -538,7 +538,8 @@ if(resolve('/admin')){
 
 ## <a name="parte19"> Criando funções para integrar com o banco de dados</a>
 
-
+- admin\pages\db.php
+- admin\pages\routes.php
 
 [Voltar ao Índice](#indice)
 
